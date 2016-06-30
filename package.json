@@ -1,0 +1,29 @@
+{
+    "author": "martin@ashbysoft.com",
+    "dependencies": {},
+    "keywords": [],
+    "name": "fuzzytime",
+    "pebble": {
+        "capabilities": [
+            ""
+        ],
+        "displayName": "fuzzytime",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk"
+        ],
+        "uuid": "487b7da6-0f23-4b50-aaba-33093f94d0a4",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
