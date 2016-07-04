@@ -6,6 +6,10 @@ void fuzzy_time(char* buf, int max_len, int minutes, int hours) {
   static char* diff_quantities[] = {" 'o' clock", "five", "ten", "quarter", "twenty", "twenty-five", "half"};
   // switch 3 minutes in advance
   minutes = minutes + 3;
+  if (minutes >= 60) {
+    hours++;
+    minutes = minutes % 60;
+  }
   
   int hour_index = hours % 12;
   int diff_q_index = minutes / 5;

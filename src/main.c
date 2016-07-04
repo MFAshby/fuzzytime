@@ -24,6 +24,8 @@ void init() {
   text_layer_set_text(the_text_layer, "");
   text_layer_set_font(the_text_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
   text_layer_set_text_alignment(the_text_layer, GTextAlignmentCenter);
+  text_layer_set_text_color(the_text_layer, GColorWhite);
+  text_layer_set_background_color(the_text_layer, GColorBlack);
   Layer* layer = text_layer_get_layer(the_text_layer);
   layer_add_child(root_layer, layer);
   
@@ -37,8 +39,9 @@ void deinit() {
 }
 
 int main(void) {
-  if (DEBUG)
-    run_tests();
+  #ifdef DEBUG
+  run_tests();
+  #endif
   
   init();
   app_event_loop();

@@ -33,5 +33,14 @@ void run_tests() {
   fuzzy_time(buf, MAX_TIME_LEN, 30, 1);
   assert_equal_strings(buf, "half past one");
   
+  fuzzy_time(buf, MAX_TIME_LEN, 59, 1);
+  assert_equal_strings(buf, "two 'o' clock");
+  
+  fuzzy_time(buf, MAX_TIME_LEN, 0, 2);
+  assert_equal_strings(buf, "two 'o' clock");
+  
+  fuzzy_time(buf, MAX_TIME_LEN, 2, 2);
+  assert_equal_strings(buf, "five past two");
+  
   APP_LOG(APP_LOG_LEVEL_INFO, "Tests complete");
 }
